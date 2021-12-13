@@ -50,20 +50,41 @@ nav li {
     color:#c2c2a3;
 }
 
+.menu-btn {
+    display: none;
+    font-size: 20px;
+    color: #a5a58d;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
 @media (max-width: 1200px) {
-    .nav-links {
-        height: 60vh;
-        display: block;
-        width: 100vh;
-        text-align: center;
-        background-color:#a5a58d;
-        margin: 0;
+    nav {
         padding: 0;
-        padding-top: 100px;
+    }
+    #hidden {
+        position: fixed;
+        height: 40vh;
+        width: 100%;
+        padding: 0;
+        top: 0;
+        background: #a5a58d;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 80px;
+    }
+    .menu-btn {
+        display: flex;
+        z-index: 999;
+        color:#a5a58d;
+        margin: auto;
+    }
+    #showmenu {
+        color: #fff;
     }
     nav li {
-        display: block;
-        margin: 20px;
+        display: none;
+        margin: 10px;
         color: #fff;
     }
     nav ul {

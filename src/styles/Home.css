@@ -9,6 +9,10 @@
     flex-wrap: wrap;
 }
 
+.max-width {
+    padding: 0 200px;
+  }
+
 h1 {
     font-size: 50px;
 }
