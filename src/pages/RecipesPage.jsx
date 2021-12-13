@@ -17,7 +17,7 @@ export default function RecipesPage() {
                 {RecipeList.map((recipeItem, key) => {
                     return (
                         <Link to={recipeItem.link}><RecipeItem 
-                            key={key}
+                            key="{key}"
                             image={recipeItem.image}
                             name={recipeItem.name}
                             time={recipeItem.time}
