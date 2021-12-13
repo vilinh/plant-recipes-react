@@ -62,12 +62,16 @@ nav li {
     nav {
         padding: 0;
     }
+    .nav-links {
+        display: none;
+    }
     #hidden {
         position: fixed;
         height: 40vh;
         width: 100%;
         padding: 0;
         top: 0;
+        display: block;
         background: #a5a58d;
         flex-direction: column;
         text-align: center;

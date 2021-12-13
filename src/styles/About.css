@@ -39,6 +39,7 @@
     box-shadow: 2px 2px 12px #233251;
     border-radius: 5px;
     background-color: #fff;
+    flex-wrap: wrap;
 }
 .about-item h2 {
     margin: 0;
@@ -46,5 +47,20 @@
 .about-item p {
     margin: 0;
     font-family: Montserrat, sans-serif;
+}
+
+@media (max-width: 950px) {
+    .about-items {
+        padding: 10px;
+    }
+    .about-item {
+        padding: 20px;
+        font-size: 10px;
+    }
+    .about-item img {
+        width: 50px;
+        height: 100%;
+        margin-right: 30px;
+    }
 }
 
