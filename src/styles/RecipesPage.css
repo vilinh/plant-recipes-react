@@ -24,6 +24,9 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
 }
+.recipesPage .max-width {
+    padding: 0 200px;
+}
 
 
 /* Recipe Item styling */
@@ -60,19 +63,37 @@
 
 
 
+@media only screen and (max-width: 1700px) {
+    .recipeList {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
 @media only screen and (max-width: 1300px) {
     .recipeList {
         grid-template-columns: 1fr 1fr;
     }
 }
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 900px) {
     .recipesPage .max-width {
         padding: 50px;
     }
     .recipeList {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
     .recipesPage .header h1 {
         margin-top: 25px;
+    }
+    .rItem {
+        width: 200px;
+    }
+}
+@media only screen and (max-width: 850px) {
+    .recipeList {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (max-width: 580px) {
+    .recipeList {
+        grid-template-columns: 1fr;
     }
 }

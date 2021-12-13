@@ -4,7 +4,7 @@ import '../styles/rPage.css';
 
 export default function HummusPasta() {
     return (
-        <div className='max-width'>
+        <div className='rec max-width'>
         <div className='recipe'>
             <div className="recipeLeft">
                 <h1>Hummus Pasta</h1>
