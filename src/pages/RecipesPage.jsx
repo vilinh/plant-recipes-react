@@ -12,7 +12,6 @@ export default function RecipesPage() {
                     <h1>Recipes</h1>
                     <p>A collection of plant based recipes you can use
                     to fuel a healthy life style.</p>
-                    <p>Get started on a healthy lifestyle one recipe at a time.</p>
                 </div>
             <div className="recipeList">
                 {RecipeList.map((recipeItem, key) => {
