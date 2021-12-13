@@ -15,13 +15,13 @@ function Navbar() {
                 <Link to ="/"><h4>plant recipes</h4></Link>
             </div>
             <ul className='nav-links' id={showLinks ? "hidden" : ""}>
-                <Link to ="/"><li onClick={showMenu}>Home</li></Link>
+                <Link to ="/" onClick={showMenu}><li >Home</li></Link>
                 <Link to ="/recipes" onClick={showMenu}><li>Recipes</li></Link>
                 <Link to ="/about" onClick={showMenu}><li>About</li></Link>
                 <li>Contact</li>
             </ul>
-            <div class="menu-btn" id={showLinks ? "showmenu" : ""}>
-                <i onClick={showMenu}class="fa fa-bars"></i>
+            <div className="menu-btn" id={showLinks ? "showmenu" : ""}>
+                <i onClick={showMenu}className="fa fa-bars"></i>
             </div>
         </nav>
     )

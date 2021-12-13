@@ -1,8 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import { BrowserRouter, BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Gallery from './pages/Gallery';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import RecipesPage from './pages/RecipesPage';
 import About from './pages/About';
 import Footer from './components/Footer';

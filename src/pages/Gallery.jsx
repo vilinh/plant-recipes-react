@@ -2,7 +2,6 @@ import React from 'react';
 import '../styles/Gallery.css';
 import ingredients from '../assets/ingr.png';
 import veg from '../assets/veg.png';
-import nuts from '../assets/nuts.png';
 
 export default function Gallery() {
     return (
