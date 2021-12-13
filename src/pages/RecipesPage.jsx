@@ -16,7 +16,7 @@ export default function RecipesPage() {
             <div className="recipeList">
                 {RecipeList.map((recipeItem, key) => {
                     return (
-                        <Link to ="/hummuspasta"><RecipeItem 
+                        <Link to="/greensmoothie"><RecipeItem 
                             key={key}
                             image={recipeItem.image}
                             name={recipeItem.name}
