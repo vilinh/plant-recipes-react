@@ -14,7 +14,7 @@ export const RecipeList = [
         "name": "Veg Noodle Soup",
         "image": vns,
         "time": "20 minutes",
-        "link":"/hummuspasta"
+        "link":"/vegnoodlesoup"
     },
     {
         "name": "Green Smoothie",
@@ -26,7 +26,7 @@ export const RecipeList = [
         "name": "Vietnamese Noodle Salad",
         "image": vietnoodlesalad,
         "time": "30 minutes",
-        "link":"/hummuspasta"
+        "link":"/vietnoodlesalad"
     },
     {
         "name": "Green Smoothie",

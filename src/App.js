@@ -8,6 +8,8 @@ import About from './pages/About';
 import Footer from './components/Footer';
 import HummusPasta from './pages/HummusPasta';
 import GreenSmoothie from './pages/GreenSmoothie';
+import VegNoodleSoup from './pages/VegNoodleSoup';
+import VietNoodleSalad from './pages/VietNoodleSalad';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/HummusPasta" element={<HummusPasta />} />
           <Route path="/GreenSmoothie" element={<GreenSmoothie />} />
+          <Route path="/VegNoodleSoup" element={<VegNoodleSoup />} />
+          <Route path="/VietNoodleSalad" element={<VietNoodleSalad />} />
         </Routes>
         <Footer />
       </BrowserRouter>
