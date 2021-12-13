@@ -1,5 +1,5 @@
 .about {
-    font-family: Playfair Display, serif;
+    font-family: Lora, serif;
 }
 
 .about .header {
@@ -14,7 +14,7 @@
 }
 .about h1 {
     font-size: 50px;
-    font-weight: 500;
+    font-weight: 400;
     margin: 0;
 }
 .about-items {
@@ -44,6 +44,6 @@
 }
 .about-item p {
     margin: 0;
-    font-family: Open Sans, sans-serif;
+    font-family: Montserrat, sans-serif;
 }
 

@@ -13,7 +13,7 @@ nav {
     color: #a5a58d;
     text-transform: uppercase;
     letter-spacing: 5px;
-    font-size: 20px;
+    font-size: 25px;
 }
 .logo a {
     text-decoration: none;
@@ -25,7 +25,8 @@ nav ul {
     display: flex;
     margin: 0 -10px;
     margin-right: 10px;
-    font-family: Open Sans, sans-serif;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
 }
 nav li {
     margin: 0 10px;

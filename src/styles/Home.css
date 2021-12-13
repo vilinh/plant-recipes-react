@@ -24,6 +24,7 @@ h1 {
 .header-left p {
     margin-bottom: 30px;
     font-size: 18px;
+    font-family: Montserrat, sans-serif;
 }
 
 .buttons {
@@ -39,7 +40,7 @@ h1 {
     padding: 13px;
     color: #fff;
     text-align: center;
-    font-family: Open Sans, sans-serif;
+    font-family: Montserrat, sans-serif;
 }
 .buttons .b2 {
     width: 102px;
@@ -50,7 +51,7 @@ h1 {
     padding: 13px;
     color: #a5a58d;
     text-align: center;
-    font-family: Open Sans, sans-serif;
+    font-family: Montserrat, sans-serif;
 }
 .b1:hover {
     background-color: #b6b69b;
