@@ -1,0 +1,49 @@
+.about {
+    font-family: Playfair Display, serif;
+}
+
+.about .header {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a5a58d;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #f1f1d2;;
+}
+.about h1 {
+    font-size: 50px;
+    font-weight: 500;
+    margin: 0;
+}
+.about-items {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 150px 300px;
+    background-color: #edf0f5;
+    color:#233251;
+}
+
+/* about component styling */
+.about-item img {
+    width: 100px;
+    height: 100%;
+    margin-right: 30px;
+}
+.about-item {
+    display: flex;
+    padding: 70px;
+    box-shadow: 2px 2px 12px #233251;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.about-item h2 {
+    margin: 0;
+}
+.about-item p {
+    margin: 0;
+    font-family: Open Sans, sans-serif;
+}
+
