@@ -48,6 +48,15 @@
         margin: auto;
     }
 }
+@media only screen and (max-width: 900px) {
+    .recipeRight img {
+        width: 300px;
+    }
+    
+    .recipe {
+        padding: 10px;
+    }
+}
 @media only screen and (max-width: 700px) {
     .recipeRight img {
         width: 300px;
@@ -56,6 +65,7 @@
         justify-content: center;
         align-items: center;
         width: 100%;
+        padding: 10px;
     }
     .max-width {
         padding: 0;
