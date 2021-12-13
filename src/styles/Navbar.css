@@ -38,8 +38,39 @@ nav li {
 }
 .nav-links li {
     list-style: none;
+    display: inline-block;
 }
 .nav-links a {
     color:#a5a58d;
     text-decoration: none;
+    display: block;
+    transition: 0.3s ease;
+}
+.nav-links a:hover {
+    color:#c2c2a3;
+}
+
+@media (max-width: 1200px) {
+    .nav-links {
+        height: 60vh;
+        display: block;
+        width: 100vh;
+        text-align: center;
+        background-color:#a5a58d;
+        margin: 0;
+        padding: 0;
+        padding-top: 100px;
+    }
+    nav li {
+        display: block;
+        margin: 20px;
+        color: #fff;
+    }
+    nav ul {
+        font-size: 20px;
+        font-weight: 300;
+    }
+    .logo {
+        display: none;
+    }
 }

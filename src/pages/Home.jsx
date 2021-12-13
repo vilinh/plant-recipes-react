@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/Home.css';
 import food from '../assets/veganbowl.png';
 import Gallery from './Gallery';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
     return (
@@ -13,8 +14,8 @@ export default function Home() {
                         <p>Learn how to incorporate more whole foods and vegetables
                         into your diet through simple recipes.</p>
                         <div className='buttons'>
-                            <div className='b1'>Explore Recipes</div>
-                            <div className='b2'>About</div>
+                        <Link to="/recipes"><div className='b1'>Explore Recipes</div></Link>
+                        <Link to="/about"><div className='b2'>About</div></Link>
                         </div>                
                     </div>
                     <div className="header-right">

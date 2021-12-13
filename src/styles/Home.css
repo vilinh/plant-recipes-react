@@ -30,6 +30,7 @@ h1 {
 .buttons {
     display: flex;
     gap: 20px;
+    font-weight: 500;
 }
 .buttons .b1 {
     width: fit-content;
@@ -55,13 +56,12 @@ h1 {
 }
 .b1:hover {
     background-color: #b6b69b;
-    border: #b6b69b 1px solid;
+    border: #a5a58d 1px solid;
     cursor: pointer;
 }
 .b2:hover {
     cursor: pointer;
 }
-
 .header-right {
     width: 60%;
     color: black;
