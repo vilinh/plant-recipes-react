@@ -2,6 +2,7 @@ import React from 'react'
 import RecipeItem from '../components/RecipeItem';
 import '../styles/RecipesPage.css';
 import { RecipeList } from '../data/RecipeList';
+import { Link } from 'react-router-dom';
 
 export default function RecipesPage() {
     return (
@@ -16,12 +17,12 @@ export default function RecipesPage() {
             <div className="recipeList">
                 {RecipeList.map((recipeItem, key) => {
                     return (
-                        <RecipeItem 
+                        <Link to ="/hummuspasta"><RecipeItem 
                             key={key}
                             image={recipeItem.image}
                             name={recipeItem.name}
                             time={recipeItem.time}
-                        />
+                        /></Link>
                     );
                 })}
             </div>
