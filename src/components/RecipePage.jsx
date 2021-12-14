@@ -3,14 +3,15 @@ import '../styles/rPage.css';
 
 export default function RecipePage({name, image, time, desc, ingredients, instructions}) {
     const [ingredientList, setIngredientList] = useState(ingredients);
-    let input = '';
+    const [input, setInput] = useState('');
     
     const inputTextHandler = (e) => {
-        input = e.target.value;
+        setInput(e.target.value);
     };
     const submitHandler = (e) => {
         e.preventDefault();
         setIngredientList([...ingredientList, input]);
+        setInput("");
     };
 
 
@@ -51,7 +52,8 @@ export default function RecipePage({name, image, time, desc, ingredients, instru
                     className="ingredient-input"
                     id = "ingred" 
                     type="text"
-                    placeholder="Add things you need here!"
+                    placeholder="Customize by adding your own ingredients!"
+                    value={input}
                     onChange={inputTextHandler}
                     />
                 <button type="submit" className="submit-button">add</button>
