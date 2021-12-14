@@ -1,0 +1,52 @@
+.contact-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+}
+.contact-form p {
+    font-family: Montserrat, sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    margin: 50px;
+}
+.feedback-input {
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    line-height: 22px;
+    border: none;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #f2f2f2;
+    font-size: 18px;
+}
+textarea {
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+}
+[type="submit"] {
+    font-family: Montserrat, sans-serif;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #a5a58d;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s;
+    color:#f2f2f2;
+    width: fit-content;
+    margin: auto;
+}
+  
+[type="submit"]:hover { background:#c0c0a6; }
