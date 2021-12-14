@@ -2,7 +2,16 @@ import React, { useState } from 'react';
 import '../styles/rPage.css';
 
 export default function RecipePage({name, image, time, desc, ingredients, instructions}) {
-    const [ingrs, setIngrs] = useState(ingredients);
+    const [ingredientList, setIngredientList] = useState(ingredients);
+    let input = '';
+    
+    const inputTextHandler = (e) => {
+        input = e.target.value;
+    };
+    const submitHandler = (e) => {
+        e.preventDefault();
+        setIngredientList([...ingredientList, input]);
+    };
 
 
     return (
@@ -21,7 +30,7 @@ export default function RecipePage({name, image, time, desc, ingredients, instru
             <div className="ingredients">
                 <h3>Ingredients</h3>
                 <ul>
-                    {ingrs.map((x) => {
+                    {ingredientList.map((x) => {
                         return(<li key={x}>{x}</li>);
                     })}
                 </ul>
@@ -30,19 +39,20 @@ export default function RecipePage({name, image, time, desc, ingredients, instru
                 <h3>Instructions</h3>
                 <ol>
                     {instructions.map((step) => {
-                        return(<li>{step}</li>);
+                        return(<li key={step}>{step}</li>);
                     })}
                 </ol>
             </div>
             </div>
 
             <div className="add-ingredient">
-                <form className="ingredient-form" >
+                <form className="ingredient-form" onSubmit={submitHandler}>
                 <input 
                     className="ingredient-input"
                     id = "ingred" 
                     type="text"
                     placeholder="Add things you need here!"
+                    onChange={inputTextHandler}
                     />
                 <button type="submit" className="submit-button">add</button>
                 </form>

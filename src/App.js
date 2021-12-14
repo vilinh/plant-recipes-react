@@ -21,7 +21,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           {RecipeList.map((recipe) => {
             return(
-                <Route path={recipe.link} element={<RecipePage 
+                <Route path={recipe.link} element={<RecipePage
+                  key={recipe} 
                   name={recipe.name}
                   image={recipe.image}
                   time={recipe.time}
