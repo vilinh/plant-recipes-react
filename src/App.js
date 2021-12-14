@@ -9,6 +9,7 @@ import HummusPasta from './pages/HummusPasta';
 import GreenSmoothie from './pages/GreenSmoothie';
 import VegNoodleSoup from './pages/VegNoodleSoup';
 import VietNoodleSalad from './pages/VietNoodleSalad';
+import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/recipes" element={<RecipesPage />} />
           <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/HummusPasta" element={<HummusPasta />} />
           <Route path="/GreenSmoothie" element={<GreenSmoothie />} />
           <Route path="/VegNoodleSoup" element={<VegNoodleSoup />} />

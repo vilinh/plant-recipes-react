@@ -18,7 +18,7 @@ function Navbar() {
                 <Link to ="/" onClick={showMenu}><li >Home</li></Link>
                 <Link to ="/recipes" onClick={showMenu}><li>Recipes</li></Link>
                 <Link to ="/about" onClick={showMenu}><li>About</li></Link>
-                <li>Contact</li>
+                <Link to ="/contact" onClick={showMenu}><li>Contact</li></Link>
             </ul>
             <div className="menu-btn" id={showLinks ? "showmenu" : ""}>
                 <i onClick={showMenu}className="fa fa-bars"></i>
