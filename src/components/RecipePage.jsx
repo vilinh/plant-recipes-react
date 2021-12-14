@@ -14,7 +14,6 @@ export default function RecipePage({name, image, time, desc, ingredients, instru
         setInput("");
     };
 
-
     return (
         <div className='rec max-width'>
             <div className='recipe'>
