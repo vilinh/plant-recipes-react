@@ -6,6 +6,7 @@
 }
 .contact-form p {
     font-family: Montserrat, sans-serif;
+    text-align: center;
 }
 
 form {
@@ -50,3 +51,19 @@ textarea {
 }
   
 [type="submit"]:hover { background:#c0c0a6; }
+
+@media only screen and (max-width: 900px) {
+    form {
+        width: 500px;
+    }
+}
+@media only screen and (max-width: 620px) {
+    form {
+        width: 400px;
+    }
+}
+@media only screen and (max-width: 460px) {
+    form {
+        width: 300px;
+    }
+}
