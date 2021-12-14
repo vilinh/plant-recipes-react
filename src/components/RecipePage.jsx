@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/rPage.css';
 
 export default function RecipePage({name, image, time, desc, ingredients, instructions}) {
+    const [ingrs, setIngrs] = useState(ingredients);
+
+
     return (
         <div className='rec max-width'>
             <div className='recipe'>
@@ -18,8 +21,8 @@ export default function RecipePage({name, image, time, desc, ingredients, instru
             <div className="ingredients">
                 <h3>Ingredients</h3>
                 <ul>
-                    {ingredients.map((ingred) => {
-                        return(<li>{ingred}</li>);
+                    {ingrs.map((x) => {
+                        return(<li key={x}>{x}</li>);
                     })}
                 </ul>
             </div>
@@ -31,6 +34,18 @@ export default function RecipePage({name, image, time, desc, ingredients, instru
                     })}
                 </ol>
             </div>
+            </div>
+
+            <div className="add-ingredient">
+                <form className="ingredient-form" >
+                <input 
+                    className="ingredient-input"
+                    id = "ingred" 
+                    type="text"
+                    placeholder="Add things you need here!"
+                    />
+                <button type="submit" className="submit-button">add</button>
+                </form>
             </div>
         </div>
     )

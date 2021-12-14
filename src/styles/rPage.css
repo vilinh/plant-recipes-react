@@ -52,6 +52,36 @@
     padding: 20px;
 }
 
+
+/* form styling */
+.ingredient-input {
+    font-family: Montserrat, sans-serif;
+    border: none;
+    background-color: #f2f3ee;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #000;
+    border-radius: 5px;
+    width: 50%;
+}
+.ingredient-input::placeholder {
+    color: #000;
+}
+.ingredient-form {
+    margin: 0;
+    flex-direction: row;
+}
+.submit-button {
+    background-color: #e8a67e;
+    margin: 10px 5px;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    padding: 10px;
+}
+.submit-button:hover {
+    background-color: #ebb390;
+}
+
 @media only screen and (max-width: 1500px) {
     .recipeRight img {
         width: 400px;
