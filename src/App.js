@@ -26,6 +26,8 @@ function App() {
                   image={recipe.image}
                   time={recipe.time}
                   desc={recipe.desc}
+                  ingredients={recipe.ingredients}
+                  instructions={recipe.instructions}
                 />}/>
             );
           })}

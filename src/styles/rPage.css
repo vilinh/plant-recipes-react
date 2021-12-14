@@ -33,6 +33,25 @@
     padding: 0 200px;
 }
 
+/* ingredients & instructions */
+.recipe-panel li {
+    font-family: Montserrat, sans-serif;
+    margin: 4px 0px;
+}
+.recipe-panel {
+    background-color: #f2f3ee;
+    margin: 20px 0px;
+}
+.recipe-panel ul {
+    list-style: circle;
+}
+.ingredients {
+    padding: 20px;
+}
+.instructions {
+    padding: 20px;
+}
+
 @media only screen and (max-width: 1500px) {
     .recipeRight img {
         width: 400px;
@@ -50,7 +69,7 @@
         margin: auto;
     }
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 950px) {
     .recipeRight img {
         width: 300px;
     }
