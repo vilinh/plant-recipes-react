@@ -39,7 +39,6 @@
     margin: 4px 0px;
 }
 .recipe-panel {
-    background-color: #f2f3ee;
     margin: 20px 0px;
 }
 .recipe-panel ul {
@@ -47,9 +46,12 @@
 }
 .ingredients {
     padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f2f3ee;
 }
 .instructions {
     padding: 20px;
+    background-color: #f2f3ee;
 }
 
 
