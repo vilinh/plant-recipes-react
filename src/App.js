@@ -10,6 +10,8 @@ import GreenSmoothie from './pages/GreenSmoothie';
 import VegNoodleSoup from './pages/VegNoodleSoup';
 import VietNoodleSalad from './pages/VietNoodleSalad';
 import Contact from './pages/Contact';
+import { RecipeList } from './data/RecipeList.js';
+import RecipePage from './components/RecipePage';
 
 function App() {
   return (
@@ -21,10 +23,16 @@ function App() {
           <Route path="/recipes" element={<RecipesPage />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/HummusPasta" element={<HummusPasta />} />
-          <Route path="/GreenSmoothie" element={<GreenSmoothie />} />
-          <Route path="/VegNoodleSoup" element={<VegNoodleSoup />} />
-          <Route path="/VietNoodleSalad" element={<VietNoodleSalad />} />
+          {RecipeList.map((recipe) => {
+            return(
+                <Route path={recipe.link} element={<RecipePage 
+                  name={recipe.name}
+                  image={recipe.image}
+                  time={recipe.time}
+                  desc={recipe.desc}
+                />}/>
+            );
+          })}
         </Routes>
         <Footer />
       </BrowserRouter>

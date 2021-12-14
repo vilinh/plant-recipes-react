@@ -1,5 +1,7 @@
 import React from 'react';
 import '../styles/Contact.css';
+import { RecipeList } from '../data/RecipeList';
+import RecipePage from '../components/RecipePage';
 
 export default function Contact() {
     return (
