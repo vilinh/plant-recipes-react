@@ -96,4 +96,11 @@
     .recipeList {
         grid-template-columns: 1fr;
     }
+    .recipesPage .header {
+        height: fit-content;
+        margin-bottom: 20px;
+    }
+    .recipeList {
+        justify-items: center;
+    }
 }
