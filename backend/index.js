@@ -27,9 +27,9 @@ const Recipe = mongoose.model('Recipe', RecipeSchema)
 
 
 // default route
-// app.get('/', (req, res) => {
-//   res.send('Hello all my name is Vi-Linh')
-// })
+app.get('/', (req, res) => {
+  res.send('Hello world')
+})
 
 //uses query params
 app.get('/recipe', (req, res) => {
@@ -49,8 +49,7 @@ app.get('/api/recipe/:recipeName', async function (req, res) {
   res.send(recipe);
 });
   
-
-//post new recipe given recipe in body
+//add new recipe given recipe in body
 app.post('/api/recipe', async(req, res) => {
   const { name, time, link, description, ingredients, instructions } = req.body
   let recipe = new Recipe({
@@ -62,7 +61,7 @@ app.post('/api/recipe', async(req, res) => {
     instructions
   })
 
-  recipe.save(function(err, recipe) {
+  await recipe.save(function(err, recipe) {
     if (err) {
       return next(err)
     }
@@ -70,8 +69,48 @@ app.post('/api/recipe', async(req, res) => {
   })
 })
 
+//adds ingredient to given recipe
+app.put('/api/recipe/:recipeName/ingredient', (req, res) => {
+  const recipeName = req.params.recipeName
+  const ingredient = req.body.newIngredient
+
+  Recipe.findOneAndUpdate(
+    {name: recipeName},
+    { $push: { ingredients: ingredient } },
+    function (error, success) {
+      if (error) {
+        console.log(error);
+      } else {
+        res.send(`${ingredient} added to ingredients`)
+      }
+    }
+  )
+})
+
+//add instruction to given recipe
+app.put('/api/recipe/:recipeName/instruction', async (req, res) => {
+  const recipeName = req.params.recipeName
+  const instruction = req.body.newInstruction
+  // const recipe = await Recipe.findOne({name: recipeName})
+  // recipe.instructions.push(instruction)
+  // await recipe.save()
+
+  Recipe.findOneAndUpdate(
+    {name: recipeName},
+    { $push: { instructions: instruction } },
+    function (error, success) {
+      if (error) {
+        console.log(error);
+      } else {
+        res.send(`${instruction} added to instructions`)
+      }
+    }
+  )
+})
+
+//delete recipe by id
 app.delete('/api/recipe', (req, res) => {
-  Recipe.findByIdAndRemove(req.body.id, (err, person) => {
+  Recipe.findByIdAndRemove(req.body.id, (err, recipe) => {
     if (err) {
       comsole.log(err);
       res.send(err.message);
