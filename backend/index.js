@@ -27,9 +27,9 @@ const Recipe = mongoose.model('Recipe', RecipeSchema)
 
 
 // default route
-app.get('/', (req, res) => {
-  res.send('Hello all my name is Vi-Linh')
-})
+// app.get('/', (req, res) => {
+//   res.send('Hello all my name is Vi-Linh')
+// })
 
 //uses query params
 app.get('/recipe', (req, res) => {
@@ -44,13 +44,13 @@ app.get('/api/recipe', async (req, res) => {
   res.send(recipes)
 })
 //get specific recipe
-app.get('/api/recipes', async (req, res) => {
-  const recipe = await Recipe.findOne({name: req.query.recipeName})
-  res.send(recipe)
-})
+app.get('/api/recipe/:recipeName', async function (req, res) {
+  const recipe = await Recipe.findOne({'name':req.params.recipeName})
+  res.send(recipe);
+});
+  
 
-
-
+//post new recipe given recipe in body
 app.post('/api/recipe', async(req, res) => {
   const { name, time, link, description, ingredients, instructions } = req.body
   let recipe = new Recipe({
