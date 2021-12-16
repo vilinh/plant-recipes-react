@@ -10,11 +10,13 @@
   font-size: 30px;
   margin: 0;
 }
-.text {
+.gallery .text {
   display: flex;
   flex-direction: column;
+  padding: 20px;
+  width: 70%;
 }
-.text p {
+.gallery .text p {
   font-family: Montserrat, sans-serif;
   margin: 10px 0;
   font-size: 15px;
@@ -58,7 +60,7 @@
     font-size: 15px;
   }
   #slider {
-    width: 200px;
+    width: 300px;
   }
 }
 @media (max-width: 700px) {
@@ -67,5 +69,6 @@
     }
     .gallery .text {
         text-align: center;
+        padding: 0px;
     }
 }
