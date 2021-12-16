@@ -23,15 +23,21 @@ export default function Gallery({data}) {
 
     return (
         <div className='gallery'>
-            <div className="gallery-panel">
+            <div className="slider">
                 <div className="text">
                     <h1>On the Blog</h1>
                     <p id="desc">{desc[index]}</p>
                 </div>
-                <div className="images">
+                <div className="slider right">
                     <i className="fas fa-chevron-left sliders"
                     onClick={prev}></i>
-                    <img id="slider" src={images[index]}/>
+                    {data.map((recipe, position) => {
+                        return (
+                            <div className={position === index ? 'card active' : 'card'}>
+                                {position === index && (<img src={recipe.image} />)}
+                            </div>
+                        )
+                    })}
                     <i className="fas fa-chevron-right sliders"
                     onClick={next}></i>
                 </div>
