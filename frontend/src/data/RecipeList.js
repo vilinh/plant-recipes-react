@@ -72,8 +72,13 @@ export const RecipeList = [
         "time": "30 minutes",
         "link":"/vietnoodlesalad",
         "desc": "A refreshing yet nourshing salad perfect for the hot weather! A combination of crunchy vegetables, chewy noodles, and baked tofu is sure to leave you feeling refreshed & satisfied!",
-        "ingredients": ["vermicelli noodles"],
-        "instructions":[]
+        "ingredients": ["vermicelli/rice noodles", "carrots, lettuce, herbs of choice (mint, basil, etc)", 
+        "1/2 large cucumber", "1/4 block tofu", "4 tbsp vegetarian fish sauce", "1 tsp chili garlic sauce", "1 tbsp sugar"],
+        "instructions":["Boil noodles according to package instructions, drain & let cool",
+        "Wash and cut vegetables into bite size pieces (shred carrots)", "Dice herbs & optional cilantro",
+        "Chop tofu into bite-size cubes and bake in oven on silicon mat for 25 minutes at 425 F",
+        "Make dressing by first dissolving sugar in 1 tbsp warm water & mixing rest of sauce ingredients",
+        "Combine all ingredients and toss thoroughly with dressing"]
         
     },
     {
