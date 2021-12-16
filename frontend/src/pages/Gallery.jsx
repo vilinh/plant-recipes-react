@@ -11,7 +11,6 @@ export default function Gallery() {
                 <p>The essential ingredients that make up
                 a majority of the featured plant-based recipes.</p>
             </div>
-            <img src={ingredients} alt='ingredients'/>
             <img src={veg} alt='veg'/>
         </div>
     )

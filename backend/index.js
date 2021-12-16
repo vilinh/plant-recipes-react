@@ -3,8 +3,13 @@ const mongoose = require('mongoose')
 
 const app = express()
 app.use(express.json())
-
 const port = 3001
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 // connect to MongoDB
 const connection_url = "mongodb+srv://vi:cats123@plantrecipes.rrkes.mongodb.net/RecipesDB?retryWrites=true&w=majority"
