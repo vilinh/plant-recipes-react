@@ -78,7 +78,7 @@ export const RecipeList = [
         
     },
     {
-        "name": "Green Smoothie",
+        "name": "GS1",
         "image": "https://i.imgur.com/njMkA9Y.png",
         "time": "7 minutes",
         "link":"/hummuspasta",
@@ -87,7 +87,7 @@ export const RecipeList = [
         "instructions":[]
     },
     {
-        "name": "Green Smoothie",
+        "name": "GS2",
         "image": "https://i.imgur.com/njMkA9Y.png",
         "time": "7 minutes",
         "link":"/hummuspasta",
@@ -96,7 +96,7 @@ export const RecipeList = [
         "instructions":[]
     },
     {
-        "name": "Green Smoothie",
+        "name": "GS3",
         "image": "https://i.imgur.com/njMkA9Y.png",
         "time": "7 minutes",
         "link":"/hummuspasta",
@@ -105,7 +105,7 @@ export const RecipeList = [
         "instructions":[]
     },
     {
-        "name": "Green Smoothie",
+        "name": "GS4",
         "image": "https://i.imgur.com/njMkA9Y.png",
         "time": "7 minutes",
         "link":"/hummuspasta",
