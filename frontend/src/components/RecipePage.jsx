@@ -22,7 +22,7 @@ export default function RecipePage({data}) {
     return (
         <div>
             {targetRecipe.map((recipe, index) => (
-                <div className='rec max-width'>
+                <div key={index} className='rec max-width'>
                     <div className='recipe'>
                         <div className="recipeLeft">
                             <h1>{recipe.name}</h1>

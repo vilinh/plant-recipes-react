@@ -12,9 +12,10 @@ export default function About() {
                 <h1>About</h1>
             </div> 
                 <div className="about-items">
-                    {paragraphs.map((item) => {
+                    {paragraphs.map((item, index) => {
                         return (
                             <AboutComponent 
+                                key={index}
                                 image={item.img}
                                 title={item.heading}
                                 desc={item.description}
