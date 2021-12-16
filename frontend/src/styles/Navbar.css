@@ -7,6 +7,7 @@ nav {
     color: #a5a58d;
     padding-left: 200px;
     padding-right: 200px;
+    justify-content: space-between;
 }
 
 .logo {
@@ -33,8 +34,6 @@ nav li {
 }
 .nav-links {
     display: flex;
-    justify-content: space-around;
-    margin-left: auto;
 }
 .nav-links li {
     list-style: none;
@@ -66,12 +65,13 @@ nav li {
         display: none;
     }
     #hidden {
-        position: fixed;
         height: 23vh;
         width: 100%;
         padding: 0;
+        position: fixed;
         padding-bottom: 20px;
         top: 0;
+        margin: 0;
         display: block;
         background: #a5a58d;
         flex-direction: column;
@@ -82,10 +82,12 @@ nav li {
         display: flex;
         z-index: 999;
         color:#a5a58d;
-        margin: auto;
+        margin: 20px;
+        position: absolute;
     }
     #showmenu {
         color: #fff;
+        position: fixed;
     }
     nav li {
         display: none;
