@@ -18,8 +18,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
+    margin-bottom: 50px;
 }
-.recipesPage .max-width {
+.recipesPage.max-width {
     padding: 0 200px;
 }
 
@@ -70,7 +71,7 @@
     }
 }
 @media only screen and (max-width: 900px) {
-    .recipesPage .max-width {
+    .recipesPage.max-width {
         padding: 50px;
     }
     .recipeList {

@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default function RecipesPage({recipes}) {
     return (
-        <div className="recipesPage">
-            <div className="max-width">
+        <div className="recipesPage max-width">
                 <div className="header">
                     <h1>Recipes</h1>
                 </div>
@@ -20,7 +19,6 @@ export default function RecipesPage({recipes}) {
                         /></Link>
                     );
                 })}
-            </div>
             </div>
         </div>
     )
