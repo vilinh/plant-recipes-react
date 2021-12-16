@@ -1,7 +1,6 @@
 import React from 'react';
 import '../styles/Home.css';
 import food from '../assets/veganbowl.png';
-import Gallery from './Gallery';
 import { Link } from 'react-router-dom';
 
 export default function Home() {

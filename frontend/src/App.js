@@ -7,9 +7,8 @@ import About from './pages/About';
 import Footer from './components/Footer';
 import Contact from './pages/Contact';
 import { RecipeList } from './data/RecipeList.js';
-import RecipePage from './components/RecipePage';
 import React, { useState, useEffect } from 'react';
-import RecipeItem from './components/RecipeItem';
+import RecipePage from './components/RecipePage';
 
 function App() {
   let [recipe, setRecipe] = useState();
@@ -33,22 +32,7 @@ function App() {
           <Route path="/recipes" element={<RecipesPage recipes={RecipeList}/>} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          {RecipeList.map((recipe) => {
-            return(
-                <Route key={recipe.name} path={recipe.link} element={<RecipePage
-                  name={recipe.name}
-                  image={recipe.image}
-                  time={recipe.time}
-                  desc={recipe.desc}
-                  ingredients={recipe.ingredients}
-                  instructions={recipe.instructions}
-                  data={recipe}
-                />}/>
-            );
-          })}
-          {/* <Route path="/recipe/name" element={<RecipePage
-            data={recipe ? recipe : null} */}
-          <Route path="/recipes/:title" element={<RecipeItem data={RecipeList}/>} />  
+          <Route path="/tests/:recipeName" element={<RecipePage data={RecipeList}/>} />
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -13,7 +13,7 @@ export default function RecipesPage({recipes}) {
             <div className="recipeList">
                 {recipes.map((recipeItem, key) => {
                     return (
-                        <Link to={recipeItem.link}><RecipeItem 
+                        <Link to={`/tests/${recipeItem.name}`}><RecipeItem 
                             key="{key}"
                             image={recipeItem.image}
                             name={recipeItem.name}
