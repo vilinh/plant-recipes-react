@@ -92,3 +92,8 @@
         width: 100%;
     }
 }
+@media (max-width: 600px) {
+    .slider.right {
+        flex-wrap: nowrap;
+    }
+}
