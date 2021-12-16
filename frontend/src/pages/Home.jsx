@@ -2,8 +2,9 @@ import React from 'react';
 import '../styles/Home.css';
 import food from '../assets/veganbowl.png';
 import { Link } from 'react-router-dom';
+import Gallery from './Gallery';
 
-export default function Home() {
+export default function Home({data}) {
     return (
         <div className='home'>
             <div className="max-width">
@@ -22,7 +23,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            {/* <Gallery /> */}
+            <Gallery data={data}/>
         </div>
     )
 }

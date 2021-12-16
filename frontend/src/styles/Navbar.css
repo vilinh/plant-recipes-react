@@ -70,6 +70,7 @@ nav li {
         height: 23vh;
         width: 100%;
         padding: 0;
+        padding-bottom: 20px;
         top: 0;
         display: block;
         background: #a5a58d;

@@ -1,12 +1,8 @@
-import hummuspasta from '../assets/hummuspasta.png';
-import vns from '../assets/vns.png';
-import gs from '../assets/greensmoothie.png';
-import vietnoodlesalad from '../assets/vietnoodlesalad.png';
 
 export const RecipeList = [
     {
         "name": "Hummus Pasta",
-        "image": hummuspasta,
+        "image": "https://i.imgur.com/paXIGwf.png",
         "time": "20 minutes",
         "link":"/hummuspasta",
         "desc": 'A simple and tasty meal perfect for college students or people on the go. Only takes under 30 minutes to prepare and can be made into leftovers - just as good or even better the day after!',
@@ -25,7 +21,7 @@ export const RecipeList = [
     },
     {
         "name": "Veg Noodle Soup",
-        "image": vns,
+        "image": "https://i.imgur.com/QOqeA0M.png",
         "time": "20 minutes",
         "link":"/vegnoodlesoup",
         "desc": 'A quick nourishing meal to get your veggies, vitamins, and fiber in. Perfect for a rainy day or any day that you just need a warm hug.',
@@ -46,7 +42,7 @@ export const RecipeList = [
     },
     {
         "name": "Green Smoothie",
-        "image": gs,
+        "image": "https://i.imgur.com/njMkA9Y.png",
         "time": "7 minutes",
         "link":"/greensmoothie",
         "desc": 'A bright smoothie filled with greens, fiber, protein, and fat. A perfect on-the-go meal for breakfast, lunch, snack, or even dinner!',
@@ -68,7 +64,7 @@ export const RecipeList = [
     },
     {
         "name": "Vietnamese Noodle Salad",
-        "image": vietnoodlesalad,
+        "image": "https://i.imgur.com/GTfvkbM.png",
         "time": "30 minutes",
         "link":"/vietnoodlesalad",
         "desc": "A refreshing yet nourshing salad perfect for the hot weather! A combination of crunchy vegetables, chewy noodles, and baked tofu is sure to leave you feeling refreshed & satisfied!",
@@ -83,37 +79,37 @@ export const RecipeList = [
     },
     {
         "name": "Green Smoothie",
-        "image": gs,
+        "image": "https://i.imgur.com/njMkA9Y.png",
         "time": "7 minutes",
         "link":"/hummuspasta",
-        "desc": "",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "ingredients":[],
         "instructions":[]
     },
     {
         "name": "Green Smoothie",
-        "image": gs,
+        "image": "https://i.imgur.com/njMkA9Y.png",
         "time": "7 minutes",
         "link":"/hummuspasta",
-        "desc": "",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "ingredients":[],
         "instructions":[]
     },
     {
         "name": "Green Smoothie",
-        "image": gs,
+        "image": "https://i.imgur.com/njMkA9Y.png",
         "time": "7 minutes",
         "link":"/hummuspasta",
-        "desc": "",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "ingredients":[],
         "instructions":[]
     },
     {
         "name": "Green Smoothie",
-        "image": gs,
+        "image": "https://i.imgur.com/njMkA9Y.png",
         "time": "7 minutes",
         "link":"/hummuspasta",
-        "desc": "",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "ingredients":[],
         "instructions":[]
     }
