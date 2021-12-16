@@ -37,12 +37,12 @@ export default function Gallery({data}) {
             <div className="gallery-panel">
                 <div className="text">
                     <h1>On the Blog</h1>
-                    <p id="desc">Preview of featured recipes available</p>
+                    <p id="desc">{desc[num]}</p>
                 </div>
                 <div className="images">
                     <i class="fas fa-chevron-left sliders"
                     onClick={prev}></i>
-                    <img id="slider" src="https://i.imgur.com/QOqeA0M.png"/>
+                    <img id="slider" src={images[num]}/>
                     <i className="fas fa-chevron-right sliders"
                     onClick={next}></i>
                 </div>
