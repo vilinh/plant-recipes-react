@@ -57,6 +57,11 @@
         padding: 50px 100px;
     }
 }
+@media only screen and (max-width: 1000px) {
+    .sliders {
+        margin: 10px;
+    }
+}
 @media (max-width: 800px) {
     .gallery h1 {
         font-size: 30px;
