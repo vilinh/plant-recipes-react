@@ -42,7 +42,7 @@ export default function Gallery({data}) {
                 <div className="images">
                     <i class="fas fa-chevron-left sliders"
                     onClick={prev}></i>
-                    <img id="slider" src={images[num]}/>
+                    <img id="slider" src="https://i.imgur.com/paXIGwf.png"/>
                     <i className="fas fa-chevron-right sliders"
                     onClick={next}></i>
                 </div>
