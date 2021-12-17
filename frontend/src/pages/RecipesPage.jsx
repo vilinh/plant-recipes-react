@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import RecipeItem from '../components/RecipeItem';
 import '../styles/RecipesPage.css';
 import { Link } from 'react-router-dom';
 
 export default function RecipesPage({recipes}) {
+
     return (
         <div className="recipesPage max-width">
                 <div className="header">

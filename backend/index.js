@@ -30,7 +30,6 @@ const RecipeSchema = new mongoose.Schema({
 
 const Recipe = mongoose.model('Recipe', RecipeSchema)
 
-
 // default route
 app.get('/', (req, res) => {
   res.send('Hello world')

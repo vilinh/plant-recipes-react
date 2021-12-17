@@ -33,8 +33,8 @@ export default function Gallery({data}) {
                     onClick={prev}></i>
                     {data.map((recipe, position) => {
                         return (
-                            <div className={position === index ? 'card active' : 'card'}>
-                                {position === index && (<img src={recipe.image} />)}
+                            <div key={position} className={position === index ? 'card active' : 'card'}>
+                                {position === index && (<img src={recipe.image} alt="recipe"/>)}
                             </div>
                         )
                     })}

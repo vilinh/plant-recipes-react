@@ -5,7 +5,7 @@ export const RecipeList = [
         "image": "https://i.imgur.com/paXIGwf.png",
         "time": "20 minutes",
         "link":"/hummuspasta",
-        "desc": 'A simple and tasty meal perfect for college students or people on the go. Only takes under 30 minutes to prepare and can be made into leftovers - just as good or even better the day after!',
+        "desc": "A simple and tasty meal perfect for college students or people on the go. Only takes under 30 minutes to prepare and can be made into leftovers - just as good or even better the day after!",
         "ingredients":[
             "4 cups whole wheat pasta (gf pasta for gfo)",
             "4 tablespoons hummus","1 lemon's juice",
@@ -24,7 +24,7 @@ export const RecipeList = [
         "image": "https://i.imgur.com/QOqeA0M.png",
         "time": "20 minutes",
         "link":"/vegnoodlesoup",
-        "desc": 'A quick nourishing meal to get your veggies, vitamins, and fiber in. Perfect for a rainy day or any day that you just need a warm hug.',
+        "desc": "A quick nourishing meal to get your veggies, vitamins, and fiber in. Perfect for a rainy day or any day that you just need a warm hug.",
         "ingredients":[
             "4 cups whole wheat pasta (gf pasta for gfo)",
             "6 cups of vegetable broth",
@@ -45,7 +45,7 @@ export const RecipeList = [
         "image": "https://i.imgur.com/njMkA9Y.png",
         "time": "7 minutes",
         "link":"/greensmoothie",
-        "desc": 'A bright smoothie filled with greens, fiber, protein, and fat. A perfect on-the-go meal for breakfast, lunch, snack, or even dinner!',
+        "desc": "A bright smoothie filled with greens, fiber, protein, and fat. A perfect on-the-go meal for breakfast, lunch, snack, or even dinner!",
         "ingredients":[
             "1 frozen banana","1 cup almond milk",
             "1 scoop vanilla plant-based protein powder",

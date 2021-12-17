@@ -12,24 +12,28 @@ import RecipePage from './components/RecipePage';
 
 function App() {
   let [recipe, setRecipe] = useState();
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     const loadRecipes = () => {
       fetch('http://localhost:3001/api/recipe/')
       .then(res => res.json())
       .then(jsondata => setRecipe(jsondata))
+      setLoaded(true);
     }
     loadRecipes();
   }, [])
 
 
   return (
+    <>
+    {loaded ? (
     <div className="App">
       <BrowserRouter>
         <Navbar/>
         <Routes>
           <Route path="/" element={<Home data={RecipeList}/>} />
-          <Route path="/recipes" element={<RecipesPage recipes={RecipeList}/>} />
+          <Route path="/recipes" element={<RecipesPage recipes={RecipeList} />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/tests/:recipeName" element={<RecipePage data={RecipeList}/>} />
@@ -37,6 +41,10 @@ function App() {
         <Footer />
       </BrowserRouter>
     </div>
+    ) : (
+      <h2>Loading Data</h2>
+    )}
+    </>
   );
 }
 
