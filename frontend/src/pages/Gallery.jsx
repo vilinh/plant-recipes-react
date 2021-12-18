@@ -3,6 +3,7 @@ import '../styles/Gallery.css';
 
 export default function Gallery({data}) {
     // array of images & current index
+
     const [index, setIndex] = useState(0);
     const length = data.length;
     var images = []
