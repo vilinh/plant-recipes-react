@@ -32,11 +32,11 @@ function App() {
       <BrowserRouter>
         <Navbar/>
         <Routes>
-          <Route path="/" element={<Home data={RecipeList}/>} />
-          <Route path="/recipes" element={<RecipesPage recipes={RecipeList} />} />
+          <Route path="/" element={<Home data={recipe}/>} />
+          <Route path="/recipes" element={<RecipesPage recipes={recipe} />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/tests/:recipeName" element={<RecipePage data={RecipeList}/>} />
+          <Route path="/tests/:recipeName" element={<RecipePage data={recipe}/>} />
         </Routes>
         <Footer />
       </BrowserRouter>

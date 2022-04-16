@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import Gallery from './Gallery';
 
 export default function Home({data}) {
+    console.log(data);
+
     return (
         <div className='home'>
             <div className="max-width">
@@ -23,7 +25,7 @@ export default function Home({data}) {
                     </div>
                 </div>
             </div>
-            <Gallery data={data}/>
+            {/* <Gallery data={data}/> */}
         </div>
     )
 }

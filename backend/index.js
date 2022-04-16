@@ -12,7 +12,8 @@ app.use(function(req, res, next) {
 });
 
 // connect to MongoDB
-const connection_url = "mongodb+srv://vi:cats123@plantrecipes.rrkes.mongodb.net/RecipesDB?retryWrites=true&w=majority"
+const connection_url = "mongodb+srv://viv:cherry@cluster0.rrkes.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+
 
 mongoose.connect(connection_url)
 .then(() => console.log('Successfully connected'))
@@ -23,6 +24,7 @@ const RecipeSchema = new mongoose.Schema({
   name: String,
   time: String,
   link: String,
+  image: String,
   description: String,
   ingredients: [String],
   instructions: [String]
@@ -32,7 +34,7 @@ const Recipe = mongoose.model('Recipe', RecipeSchema)
 
 // default route
 app.get('/', (req, res) => {
-  res.send('Hello world')
+  res.send('Hello')
 })
 
 //uses query params
@@ -55,10 +57,11 @@ app.get('/api/recipe/:recipeName', async function (req, res) {
   
 //add new recipe given recipe in body
 app.post('/api/recipe', async(req, res) => {
-  const { name, time, link, description, ingredients, instructions } = req.body
+  const { name, time, image, link, description, ingredients, instructions } = req.body
   let recipe = new Recipe({
     name, 
     time,
+    image,
     link,
     description,
     ingredients,
