@@ -1,8 +1,13 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const cors = require('cors')
+const path = require("path");
 
 const app = express()
 app.use(express.json())
+app.use(cors());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, "public")));
 const port = 3001
 
 app.use(function(req, res, next) {
@@ -10,6 +15,7 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
+
 
 // connect to MongoDB
 const connection_url = "mongodb+srv://viv:cherry@cluster0.rrkes.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
@@ -125,5 +131,9 @@ app.delete('/api/recipe', (req, res) => {
     res.send(`Recipe with id ${req.body.id} was deleted`)
   })
 })
+
+app.get('*', (request, response) => {
+  response.sendFile(path.join(__dirname, '../frontend/public/index.html'));
+});
 
 app.listen(port)
