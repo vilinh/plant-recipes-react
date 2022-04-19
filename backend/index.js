@@ -10,9 +10,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 const port = 3001
 
-app.use(function(req, res, next) {
+app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header('Access-Control-Allow-Methods', 'GET,POST,OPTIONS,DELETE,PUT');
   next();
 });
 
@@ -31,7 +32,7 @@ const RecipeSchema = new mongoose.Schema({
   time: String,
   link: String,
   image: String,
-  description: String,
+  desc: String,
   ingredients: [String],
   instructions: [String]
 }, {collection: 'Recipes'});
@@ -63,13 +64,13 @@ app.get('/api/recipe/:recipeName', async function (req, res) {
   
 //add new recipe given recipe in body
 app.post('/api/recipe', async(req, res) => {
-  const { name, time, image, link, description, ingredients, instructions } = req.body
+  const { name, time, image, link, desc, ingredients, instructions } = req.body
   let recipe = new Recipe({
     name, 
     time,
     image,
     link,
-    description,
+    desc,
     ingredients,
     instructions
   })

@@ -5,7 +5,7 @@ export default function Gallery({ data }) {
   // array of images & current index
 
   const [index, setIndex] = useState(0);
-  const length = 5;
+  const length = data.length;
   var images = [];
   var desc = [];
   data.map((recipe) => {
@@ -25,11 +25,10 @@ export default function Gallery({ data }) {
 
   return (
     <div className="gallery">
-      <div className="slider">
-        <div className="text">
+      <div className="text">
           <h1>On the Blog</h1>
-          <p id="desc">{desc[index]}</p>
-        </div>
+      </div>
+      <div className="slider">
         <div className="slider right">
           <i className="fas fa-chevron-left sliders" onClick={prev}></i>
           {data.map((recipe, position) => {

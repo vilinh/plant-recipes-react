@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import '../styles/rPage.css';
 
-export default function RecipePage({data}) {
+export default function RecipePage({recipe}) {
     const { recipeName } = useParams();
-    let targetRecipe = data.filter(x => x.name === recipeName)
+    let targetRecipe = recipe.filter(x => x.name === recipeName)
 
     //form states & handlers
     const [ingredientList, setIngredientList] = useState(targetRecipe[0].ingredients);

@@ -3,6 +3,7 @@ import '../styles/Home.css';
 import food from '../assets/veganbowl.png';
 import { Link } from 'react-router-dom';
 import Gallery from './Gallery';
+import { useState } from 'react';
 
 export default function Home({data}) {
     console.log(data);
@@ -25,7 +26,7 @@ export default function Home({data}) {
                     </div>
                 </div>
             </div>
-            {/* <Gallery data={data}/> */}
+            {data && <Gallery data={data}/>}
         </div>
     )
 }
