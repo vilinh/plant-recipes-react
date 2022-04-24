@@ -2,6 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const path = require("path");
+const nodemailer = require("nodemailer");
 
 const app = express()
 app.use(express.json())
@@ -133,9 +134,5 @@ app.delete('/api/recipe', (req, res) => {
     res.send(`Recipe with id ${req.body.id} was deleted`)
   })
 })
-
-app.get('*', (request, response) => {
-  response.sendFile(path.join(__dirname, '../frontend/public/index.html'));
-});
 
 app.listen(port)
