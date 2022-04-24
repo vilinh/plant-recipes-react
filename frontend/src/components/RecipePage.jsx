@@ -1,14 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import '../styles/rPage.css';
 
 export default function RecipePage({recipe}) {
     const { recipeName } = useParams();
-    let targetRecipe = recipe.filter(x => x.name === recipeName)
-
+    const [targetRec, setTargetRec] = useState({});
+  
     //form states & handlers
-    const [ingredientList, setIngredientList] = useState(targetRecipe[0].ingredients);
+    const [ingredientList, setIngredientList] = useState([]);
+    const [instructions, setInstructions] = useState([]);
     const [input, setInput] = useState('');
+
+    useEffect(() => {
+        const loadRecipes = async () => {
+          let rec = await (await fetch('http://localhost:3001/api/recipe/' + recipeName)).json();
+          console.log(rec);
+          setTargetRec(rec);
+          setIngredientList(rec.ingredients);
+          setInstructions(rec.instructions);
+        }
+        loadRecipes();
+      }, [])
     
     const inputTextHandler = (e) => {
         setInput(e.target.value);
@@ -21,16 +33,16 @@ export default function RecipePage({recipe}) {
 
     return (
         <div>
-            {targetRecipe.map((recipe, index) => (
-                <div key={index} className='rec max-width'>
+            {targetRec && (
+                <div className='rec max-width'>
                     <div className='recipe'>
                         <div className="recipeLeft">
-                            <h1>{recipe.name}</h1>
-                            <p id='time'>{recipe.time}</p>
-                            <p className='description'>{recipe.desc}</p>
+                            <h1>{targetRec.name}</h1>
+                            <p id='time'>{targetRec.time}</p>
+                            <p className='description'>{targetRec.desc}</p>
                         </div>
                         <div className="recipeRight">
-                            <img src={recipe.image} alt={recipe.name}/>
+                            <img src={targetRec.image} alt={targetRec.name}/>
                         </div>
                     </div>
 
@@ -38,7 +50,7 @@ export default function RecipePage({recipe}) {
                         <div className="ingredients">
                             <h3>Ingredients</h3>
                             <ul>
-                                {ingredientList.map((x) => {
+                                {ingredientList && ingredientList.map((x) => {
                                     return(<li key={x}>{x}</li>);
                                 })}
                             </ul>
@@ -46,7 +58,7 @@ export default function RecipePage({recipe}) {
                     <div className="instructions">
                         <h3>Instructions</h3>
                         <ol>
-                            {recipe.instructions.map((step) => {
+                            {instructions.map((step) => {
                                 return(<li key={step}>{step}</li>);
                             })}
                         </ol>
@@ -69,7 +81,7 @@ export default function RecipePage({recipe}) {
                 </div>
             </div>
             
-            ))}
+            )}
         </div>
     )
 }

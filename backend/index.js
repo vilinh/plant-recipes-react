@@ -67,6 +67,7 @@ app.get('/api/recipe/:recipeName', async function (req, res) {
 //add new recipe given recipe in body
 app.post('/api/recipe', async(req, res) => {
   const { name, time, image, link, desc, ingredients, instructions } = req.body
+  //create
   let recipe = new Recipe({
     name, 
     time,
@@ -77,6 +78,7 @@ app.post('/api/recipe', async(req, res) => {
     instructions
   })
 
+  //save
   await recipe.save(function(err, recipe) {
     if (err) {
       return next(err)
