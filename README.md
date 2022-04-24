@@ -12,8 +12,8 @@ to host my own creations in the kitchen!
 
 # running the app
 - Run the database when in backend directory
-  - cd into backend
+  - `cd backend`
   - `npm run dev`
 - Run the frontend when in frontend directory 
-  - cd into frontend
+  - `cd frontend`
   - `npm start`
