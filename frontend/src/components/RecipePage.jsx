@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import '../styles/rPage.css';
 
-export default function RecipePage({recipe}) {
+export default function RecipePage() {
     const { recipeName } = useParams();
     const [targetRec, setTargetRec] = useState({});
   

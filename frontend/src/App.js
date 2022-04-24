@@ -35,7 +35,7 @@ function App() {
           <Route path="/recipes" element={<RecipesPage recipes={recipe} />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/recipes/:recipeName" element={<RecipePage recipe={recipe}/>} />
+          <Route path="/recipes/:recipeName" element={<RecipePage/>} />
         </Routes>
         <Footer />
       </BrowserRouter>
