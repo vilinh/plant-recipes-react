@@ -6,7 +6,6 @@ import RecipesPage from './pages/RecipesPage';
 import About from './pages/About';
 import Footer from './components/Footer';
 import Contact from './pages/Contact';
-import { RecipeList } from './data/RecipeList.js';
 import React, { useState, useEffect } from 'react';
 import RecipePage from './components/RecipePage';
 
@@ -36,7 +35,7 @@ function App() {
           <Route path="/recipes" element={<RecipesPage recipes={recipe} />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/tests/:recipeName" element={<RecipePage recipe={recipe}/>} />
+          <Route path="/recipes/:recipeName" element={<RecipePage recipe={recipe}/>} />
         </Routes>
         <Footer />
       </BrowserRouter>

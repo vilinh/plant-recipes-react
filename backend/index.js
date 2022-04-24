@@ -37,6 +37,7 @@ const RecipeSchema = new mongoose.Schema({
   instructions: [String]
 }, {collection: 'Recipes'});
 
+//collection in MongoDB + type of items
 const Recipe = mongoose.model('Recipe', RecipeSchema)
 
 // default route
