@@ -14,13 +14,12 @@ export default function RecipePage() {
     useEffect(() => {
         const loadRecipes = async () => {
           let rec = await (await fetch('http://localhost:3001/api/recipe/' + recipeName)).json();
-          console.log(rec);
           setTargetRec(rec);
           setIngredientList(rec.ingredients);
           setInstructions(rec.instructions);
         }
         loadRecipes();
-      }, [])
+      }, [recipeName])
     
     const inputTextHandler = (e) => {
         setInput(e.target.value);

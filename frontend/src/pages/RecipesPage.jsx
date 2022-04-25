@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import RecipeItem from '../components/RecipeItem';
 import '../styles/RecipesPage.css';
 import { Link } from 'react-router-dom';
@@ -11,7 +11,7 @@ export default function RecipesPage({recipes}) {
                     <h1>Recipes</h1>
                 </div>
             <div className="recipeList">
-                {recipes.map((recipeItem, index) => {
+                {recipes && recipes.map((recipeItem, index) => {
                     return (
                         <Link key={index} to={`/recipes/${recipeItem.name}`}><RecipeItem 
                             image={recipeItem.image}

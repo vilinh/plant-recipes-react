@@ -3,10 +3,8 @@ import '../styles/Home.css';
 import food from '../assets/veganbowl.png';
 import { Link } from 'react-router-dom';
 import Gallery from './Gallery';
-import { useState } from 'react';
 
 export default function Home({data}) {
-    console.log(data);
 
     return (
         <div className='home'>

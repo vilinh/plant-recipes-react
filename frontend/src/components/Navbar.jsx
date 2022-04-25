@@ -3,7 +3,6 @@ import '../styles/Navbar.css';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
-
     const [showLinks, setShowLinks] = useState(false);
     function showMenu(){
         setShowLinks(!showLinks);
@@ -20,7 +19,7 @@ function Navbar() {
                 <Link to ="/about" onClick={showMenu}><li>About</li></Link>
                 <Link to ="/contact" onClick={showMenu}><li>Contact</li></Link>
             </ul>
-            <div className="menu-btn" id={showLinks ? "showmenu" : ""}>
+            <div className="menu-btn"id={showLinks ? "showmenu" : ""}>
                 <i onClick={showMenu}className="fa fa-bars"></i>
             </div>
         </nav>
